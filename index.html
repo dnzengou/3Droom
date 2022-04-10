@@ -1,0 +1,85 @@
+<!-- src= "https://replit.com/@viemma/labb1?v=1#index.html" -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      3D Room test
+    </title>
+    <meta name="description" content="labb1">
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-area-light-component/dist/aframe-area-light-component.min.js">
+      </script>
+  <!--<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>-->
+  
+
+  </head>
+  <body>
+
+    <!--<a-scene embedded arjs>-->
+    <a-scene>
+
+      <a-assets>
+          <img id="golv" src="assets/img/wall1.png">
+          <img id="vagg" src="assets/img/wall4.png">
+          <img id="tak" src="assets/img/wall3.png">
+
+      </a-assets>
+
+    <!-- 3D modeller Chris Rock vs Will Smith model (src: Sketchfab.com)
+      <a-entity gltf-model="assets/ChrisRockvsWillSmith.glb"></a-entity>-->
+           
+      <a-entity light="type: ambient; color: #f7f9fc; intensity: 0.6" position ="1.005 3.832 -1.403"></a-entity>
+      
+      <a-entity light="type: point; intensity: 0.7; distance: 50; decay: 2"
+          position="-1.128 3.145 1.044"></a-entity>
+      <a-entity light="type: spot; intensity: 0.3; distance: 20; decay: 2"
+          position="-0.988 5.261 1.809" color="#73cef0"></a-entity>
+
+      <a-entity area-light="intensity:4; width:10; height:0.2; color: #fafaca;" position="2.5 3.47 -5" rotation="90 0 90"></a-entity>
+
+      <a-sky color="#e0fdff"></a-sky>
+      
+      <a-box scale="6 1 10" position="-0.5 4.2 0" src="#tak"></a-box>
+
+      <a-box scale="0.5 1 7.5" position="3.441 0.367 1.340" src="#vagg"></a-box>
+      
+      <!--tak golv och vägg-->
+      <a-plane position="0 0 0" rotation="-90 0 0" width="9" height="10" 
+        src="#golv"></a-plane>
+      
+      <a-plane position="0 4 0" rotation="90 0 0" width="10" height="10" 
+        src="#tak"></a-plane>
+      
+         
+      <a-plane position="-3.497 2 0" rotation="0 90 90" width="4" height="10" 
+        src="#vagg"></a-plane>
+      
+      <a-box position="3.636 0.380 0" rotation="0 -90 90" width="1" height="10" depth="0.3"       src="#vagg"></a-box>
+
+      <a-box position="3.619 3.562 0" rotation="0 -90 90" width="1" height="10" depth="0.3"         src="#vagg"></a-box>
+
+      <a-plane position="3.8 1.890 -0.295" width="3" height="3" rotation="0 270 0" color="#d5f7f4" opacity="0.2" metalness="1"></a-plane>
+
+      <a-plane position="3.8 1.890 -3.065" width="3" height="3" rotation="0 270 0" color="#d5f7f4" opacity="0.2" metalness="1"></a-plane>
+
+      <a-plane position="3.8 1.890 3.098" width="3" height="3" rotation="0 270 0" color="#d5f7f4" opacity="0.2" metalness="1"></a-plane>
+      
+      <a-box position="3.623 2.032 -4.462" rotation="0 -90 90" width="4" height="1"depth="0.3" src="#vagg"></a-box>
+
+      <a-box position="3.623 2.032 4.462" rotation="0 -90 90" width="4" height="1" depth="0.3" src="#vagg"></a-box>
+      
+      <a-box position="3.623 2.032 -1.439" rotation="0 -90 90" width="4" height="0.8" depth="0.3" src="#vagg"></a-box>
+
+      <a-box position="3.623 2.032 1.439" rotation="0 -90 90" width="4" height="0.8" depth="0.3" src="#vagg"></a-box>
+      
+      <a-plane position="0 2 4.971" rotation="0 -180 90" width="4" height="7" src="#logga"></a-plane>
+      
+      <a-plane position="0 2 -4.983" rotation="0 0 90" width="4" height="7" src="#vagg"></a-plane>
+
+      <a-dodecahedron color="#e5e6df" radius="7" rotation="-30.830 35 0.510" position="1.073 -5.379 -6.076"></a-dodecahedron>
+      
+                                                
+    </a-scene>
+  </body>
+</html>
